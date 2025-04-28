@@ -12,153 +12,119 @@ const spaceGrotesk = Space_Grotesk({
 const Search: React.FC = () => {
   return (
     <div className={spaceGrotesk.className}>
-    <div className='mb-[100px]'>
-      <div className="max-w-[90%] m-auto flex flex-wrap">
-        <div className="flex flex-wrap w-[45%] border-2 m-auto  p-[50px] rounded-[45px] border-b-6 mb-[40px] bg-[#F3F3F3]">
-          <div className="w-1/3 mb-5 mr-4">
-            <p className="text-[24px] font-bold bg-[#B9FF66] pl-1 rounded-[7px]">Search engine</p>
-            <p className="text-[24px] font-bold mb-4 bg-[#B9FF66] pl-1 rounded-[7px] w-[90%]">optimization</p>
-            <div className="flex items-center gap-2 mt-[93px]">
-              <Link href="/Service" className="text-[#B9FF66] hover:underline rounded-full bg-black w-[41px] h-[41px] flex items-center justify-center">
-                <ArrowOutwardIcon fontSize="small" />
-              </Link>
-              <span className="font-normal text-[20px] leading-[28px]">Learn more</span>
+      <div className="mb-[100px]">
+        <div className="max-w-[90%] m-auto flex flex-wrap gap-8 justify-center">
+
+          {/* CARD 1: Search Engine Optimization */}
+          <div className="flex flex-col md:flex-row w-full md:w-[45%] border-2 p-8 md:p-10 rounded-[45px] bg-[#F3F3F3]">
+            <div className="md:w-1/2 mb-5 md:mb-0">
+              <span className="text-[24px] font-bold bg-[#B9FF66] pl-2 rounded-[7px]">Search engine</span>
+              <div>
+
+              <span className="text-[20px] font-bold mt-2 mb-6 bg-[#B9FF66] pl-2 rounded-[7px] w-[90%] max-w-[300px]">optimization</span>
+              </div>
+              <div className="flex items-center gap-2 mt-8">
+                <Link href="/Service" className="text-[#B9FF66] hover:underline rounded-full bg-black w-10 h-10 flex items-center justify-center">
+                  <ArrowOutwardIcon fontSize="small" />
+                </Link>
+                <span className="font-normal text-[20px] leading-[28px]">Learn more</span>
+              </div>
+            </div>
+            <div className="relative w-full md:w-1/2 h-48 md:h-auto flex justify-center items-center">
+              <Image src="/search.png" alt="Search" fill className="object-contain" priority />
             </div>
           </div>
 
-
-          <div className="w-3/5 flex justify-center items-center">
-            <Image
-              src="/search.png"
-              alt="Search"
-              width={210}
-              height={166}
-              priority
-            />
-          </div>
-        </div>
-
-
-        <div className="flex flex-wrap w-[45%] border-2 m-auto  p-[50px] rounded-[45px] border-b-6 mb-[40px] bg-[#B9FF66]">
-          <div className="w-1/3 mb-5 mr-4">
-            <p className="text-[24px] font-bold bg-white pl-1 rounded-[7px]">Pay-per-click</p>
-            <p className="text-[24px] font-bold mb-4 bg-white pl-1 rounded-[7px] w-[90%]">advertising</p>
-            <div className="flex items-center gap-2 mt-[93px]">
-              <Link href="/Service" className="text-[#B9FF66] hover:underline border-2 rounded-full bg-black w-[41px] h-[41px] flex items-center justify-center">
-                <ArrowOutwardIcon fontSize="small" />
-              </Link>
-              <span className="font-normal text-[20px] leading-[28px]">Learn more</span>
+          {/* CARD 2: Pay-per-click Advertising */}
+          <div className="flex flex-col md:flex-row w-full md:w-[45%] border-2 p-8 md:p-10 rounded-[45px] bg-[#B9FF66]">
+            <div className="md:w-1/2 mb-5 md:mb-0">
+              <p className="text-[24px] font-bold bg-white pl-2 rounded-[7px]">Pay-per-click</p>
+              <span className="text-[21px] font-bold mt-2 mb-6 bg-white pl-2 rounded-[7px] w-[90%] max-w-[300px]">advertising</span>
+              <div className="flex items-center gap-2 mt-8">
+                <Link href="/Service" className="text-[#B9FF66] hover:underline rounded-full bg-black w-10 h-10 flex items-center justify-center">
+                  <ArrowOutwardIcon fontSize="small" />
+                </Link>
+                <span className="font-normal text-[20px] leading-[28px]">Learn more</span>
+              </div>
+            </div>
+            <div className="relative w-full md:w-1/2 h-48 md:h-auto flex justify-center items-center">
+              <Image src="/arrow.png" alt="Arrow" fill className="object-contain" priority />
             </div>
           </div>
 
-
-          <div className="w-3/5 flex justify-center items-center">
-            <Image
-              src="/arrow.png"
-              alt="Arrow"
-              width={210}
-              height={147.62}
-              priority
-            />
-          </div>
-        </div>
-        <div className="flex flex-wrap w-[45%] border-2 m-auto  p-[50px] rounded-[45px] border-b-6 mb-[40px] bg-[#191A23]">
-          <div className="w-1/3 mb-5 mr-8">
-            <p className="text-[24px] font-bold bg-[#B9FF66] pl-1 rounded-[7px]">Social Media</p>
-            <p className="text-[24px] font-bold mb-4 bg-[#B9FF66] pl-1 rounded-[7px] w-[80%]">Marketing</p>
-            <div className="flex items-center gap-2 mt-[93px]">
-              <Link href="/Service" className="text-[#B9FF66] hover:underline  rounded-full bg-white w-[41px] h-[41px] flex items-center justify-center">
-                <ArrowOutwardIcon fontSize="small" className='text-black'/>
-              </Link>
-              <span className="font-normal text-[20px] leading-[28px] text-[#FFFFFF]">Learn more</span>
+          {/* CARD 3: Social Media Marketing */}
+          <div className="flex flex-col md:flex-row w-full md:w-[45%] border-2 p-8 md:p-10 rounded-[45px] bg-[#191A23]">
+            <div className="md:w-1/2 mb-5 md:mb-0">
+              <p className="text-[24px] font-bold bg-[#B9FF66] pl-2 rounded-[7px]">Social Media</p>
+              <span className="text-[24px] font-bold mt-2 mb-6 bg-[#B9FF66] pl-2 rounded-[7px] w-[80%] max-w-[300px]">Marketing</span>
+              <div className="flex items-center gap-2 mt-8">
+                <Link href="/Service" className="text-[#B9FF66] hover:underline rounded-full bg-white w-10 h-10 flex items-center justify-center">
+                  <ArrowOutwardIcon fontSize="small" className="text-black" />
+                </Link>
+                <span className="font-normal text-[20px] leading-[28px] text-white">Learn more</span>
+              </div>
+            </div>
+            <div className="relative w-full md:w-1/2 h-48 md:h-auto flex justify-center items-center">
+              <Image src="/smile.png" alt="Smile" fill className="object-contain" priority />
             </div>
           </div>
 
+          {/* CARD 4: Email Marketing */}
+          <div className="flex flex-col md:flex-row w-full md:w-[45%] border-2 p-8 md:p-10 rounded-[45px] bg-[#F3F3F3]">
+            <div className="md:w-1/2 mb-5 md:mb-0">
+              <span className="text-[24px] font-bold bg-[#B9FF66] pl-2 rounded-[7px] w-2/5">Email</span>
+              <div>
 
-          <div className="w-3/5 flex justify-center items-center">
-            <Image
-              src="/smile.png"
-              alt="Smile"
-              width={210}
-              height={166}
-              priority
-            />
-          </div>
-        </div>
-        <div className="flex flex-wrap w-[45%] border-2 m-auto  p-[50px] rounded-[45px] border-b-6 mb-[40px] bg-[#F3F3F3]">
-          <div className="w-1/3 mb-5 mr-4">
-            <p className="text-[24px] font-bold bg-[#B9FF66] pl-1 rounded-[7px] w-2/5">Email</p>
-            <p className="text-[24px] font-bold mb-4 bg-[#B9FF66] pl-1 rounded-[7px] w-[80%]">Marketing</p>
-            <div className="flex items-center gap-2 mt-[93px]">
-              <Link href="/Service" className="text-[#B9FF66] hover:underline border-2 rounded-full bg-black w-[41px] h-[41px] flex items-center justify-center">
-                <ArrowOutwardIcon fontSize="small" />
-              </Link>
-              <span className="font-normal text-[20px] leading-[28px]">Learn more</span>
+              <span className="text-[24px] font-bold mt-2 mb-6 bg-[#B9FF66] pl-2 rounded-[7px] w-[80%] max-w-[300px]">Marketing</span>
+              </div>
+              <div className="flex items-center gap-2 mt-8">
+                <Link href="/Service" className="text-[#B9FF66] hover:underline rounded-full bg-black w-10 h-10 flex items-center justify-center">
+                  <ArrowOutwardIcon fontSize="small" />
+                </Link>
+                <span className="font-normal text-[20px] leading-[28px]">Learn more</span>
+              </div>
+            </div>
+            <div className="relative w-full md:w-1/2 h-48 md:h-auto flex justify-center items-center">
+              <Image src="/letter.png" alt="Letter" fill className="object-contain rotate-90" priority />
             </div>
           </div>
 
-
-          <div className="w-3/5 flex justify-center items-center">
-            <Image
-              src="/letter.png"
-              alt="Letter"
-              width={210}
-              height={166}
-              priority
-              className='rotate-90'
-            />
-          </div>
-        </div>
-        <div className="flex flex-wrap w-[45%] border-2 m-auto  p-[50px] rounded-[45px] mb-[40px] border-b-6 bg-[#B9FF66]">
-          <div className="w-2/5 mb-5 mr-4">
-            <p className="text-[24px] font-bold bg-white pl-1 rounded-[7px] w-1/2">Content</p>
-            <p className="text-[24px] font-bold mb-4 bg-white pl-1 rounded-[7px] w-1/2">Creation</p>
-            <div className="flex items-center gap-2 mt-[93px]">
-              <Link href="/Service" className="text-[#B9FF66] hover:underline border-2 rounded-full bg-black w-[41px] h-[41px] flex items-center justify-center">
-                <ArrowOutwardIcon fontSize="small" />
-              </Link>
-              <span className="font-normal text-[20px] leading-[28px]">Learn more</span>
+          {/* CARD 5: Content Creation */}
+          <div className="flex flex-col md:flex-row w-full md:w-[45%] border-2 p-8 md:p-10 rounded-[45px] bg-[#B9FF66]">
+            <div className="md:w-1/2 mb-5 md:mb-0">
+              <p className="text-[24px] font-bold bg-[#F3F3F3] pl-2 rounded-[7px] w-4/5">Content</p>
+              <span className="text-[24px] font-bold mt-2 mb-6 bg-[#F3F3F3] pl-2 rounded-[7px] w-[80%] max-w-[300px]">Creation</span>
+              <div className="flex items-center gap-2 mt-8">
+                <Link href="/Service" className="text-[#B9FF66] hover:underline rounded-full bg-black w-10 h-10 flex items-center justify-center">
+                  <ArrowOutwardIcon fontSize="small" />
+                </Link>
+                <span className="font-normal text-[20px] leading-[28px]">Learn more</span>
+              </div>
+            </div>
+            <div className="relative w-full md:w-1/2 h-48 md:h-auto flex justify-center items-center">
+              <Image src="/space.png" alt="Space" fill className="object-contain rotate-90" priority />
             </div>
           </div>
 
-
-          <div className="w-1/2 flex justify-center items-center">
-            <Image
-              src="/space.png"
-              alt="Space"
-              width={210}
-              height={166}
-              priority
-            />
-          </div>
-        </div>
-        <div className="flex flex-wrap w-[45%] border-2 m-auto  p-[50px] rounded-[45px] mb-[40px] border-b-6 bg-[#191A23]">
-          <div className="w-1/3 mb-5 mr-4">
-            <p className="text-[24px] font-bold bg-[#B9FF66] pl-1 rounded-[7px]">Analytics and </p>
-            <p className="text-[24px] font-bold mb-4 bg-[#B9FF66] pl-1 rounded-[7px] w-[70%]">Tracking</p>
-            <div className="flex items-center gap-2 mt-[93px]">
-              <Link href="/Service" className="text-black hover:underline border-2 rounded-full bg-white w-[41px] h-[41px] flex items-center justify-center">
-                <ArrowOutwardIcon fontSize="small" />
-              </Link>
-              <span className="font-normal text-[20px] leading-[28px] text-white">Learn more</span>
+          {/* CARD 6: Analytics and Tracking */}
+          <div className="flex flex-col md:flex-row w-full md:w-[45%] border-2 p-8 md:p-10 rounded-[45px] bg-[#191A23]">
+            <div className="md:w-1/2 mb-5 md:mb-0">
+              <p className="text-[24px] font-bold bg-[#B9FF66] pl-2 rounded-[7px]">Analytics and</p>
+              <span className="text-[24px] font-bold mt-2 mb-6 bg-[#B9FF66] pl-2 rounded-[7px] w-[70%] max-w-[300px]">Tracking</span>
+              <div className="flex items-center gap-2 mt-8">
+                <Link href="/Service" className="text-black hover:underline rounded-full bg-white w-10 h-10 flex items-center justify-center">
+                  <ArrowOutwardIcon fontSize="small" />
+                </Link>
+                <span className="font-normal text-[20px] leading-[28px] text-white">Learn more</span>
+              </div>
+            </div>
+            <div className="relative w-full md:w-1/2 h-48 md:h-auto flex justify-center items-center">
+              <Image src="/diaqram.png" alt="Diagram" fill className="object-contain" priority />
             </div>
           </div>
 
-
-          <div className="w-3/5 flex justify-center items-center">
-            <Image
-              src="/diaqram.png"
-              alt="Diaqram"
-              width={210}
-              height={166}
-              priority
-            />
-          </div>
         </div>
-
-
       </div>
-    </div>
     </div>
   );
 };

@@ -13,7 +13,7 @@ const Navigate: React.FC = () => {
   return (
     <div className={spaceGrotesk.className}>
       <div className="flex max-w-[90%] m-auto my-[70px] justify-between flex-wrap gap-10">
-        <div className="w-[37.5%] min-w-[300px]">
+        <div className="w-[37.5%] min-w-[300px] order-1 sm:order-0 md:order-1 lg:order-0">
           <h1 className="font-medium text-[60px] leading-[100%] tracking-[0%]">
             Navigating the digital landscape for success
           </h1>
@@ -25,7 +25,7 @@ const Navigate: React.FC = () => {
           </button>
         </div>
 
-        <div className="w-1/2 min-w-[300px] ml-7">
+        <div className="w-1/2 min-w-[300px] ml-7 order-0 sm:order-1">
           <Image
             src="/song.svg"
             width={600.46}
