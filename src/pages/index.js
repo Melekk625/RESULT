@@ -15,6 +15,7 @@ import Test from "./components/Test";
 import BlackSlider from "./components/BlackSlider";
 import Contact from "./components/Contact";
 import Input from "./components/Input";
+import Footer from "./components/Footer";
 export default function Home() {
   return (
     <div >
@@ -34,6 +35,7 @@ export default function Home() {
       <BlackSlider/>
       <Contact/>
       <Input/>
+      <Footer/>
     </div>
   );
 }
