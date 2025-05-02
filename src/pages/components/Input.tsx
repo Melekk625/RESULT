@@ -19,68 +19,77 @@ function Input({}: Props) {
 
   return (
     <div>
-      <div className='flex max-w-[90%] m-auto bg-[#F3F3F3] py-[60px] px-[100px] rounded-[45px] mb-[140px] overflow-hidden'>
-        <div className='w-[80%]'>
-          <div className='flex mb-10'>
-            <div className='pr-9'>
+      <div className='flex flex-col lg:flex-row max-w-[90%] m-auto bg-[#F3F3F3] py-10 px-6 lg:px-[100px] rounded-[30px] lg:rounded-[45px] mb-[100px] lg:mb-[140px] overflow-hidden gap-10'>
+        
+        {/* Form Section */}
+        <div className='w-full lg:w-1/2'>
+          <div className='flex mb-8 gap-6'>
+            <label className='flex items-center'>
               <input
                 type="radio"
                 checked={option === 'sayHi'}
                 onChange={() => setOption('sayHi')}
-                className='mr-4'
+                className='mr-2'
               />
               Say Hi
-            </div>
-            <div>
+            </label>
+            <label className='flex items-center'>
               <input
                 type="radio"
                 checked={option === 'getQuote'}
                 onChange={() => setOption('getQuote')}
-                className='mr-4'
+                className='mr-2'
               />
               Get a Quote
-            </div>
+            </label>
           </div>
 
-          <p className='py-1'>Name</p>
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder='Name'
-            required
-            className='w-4/5 border-[1px] py-[18px] px-[30px] rounded-[14px] mb-[25px] bg-white'
-          />
+          <div className='mb-4'>
+            <p className='py-1'>Name</p>
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder='Name'
+              required
+              className='w-full border py-4 px-6 rounded-[14px] bg-white'
+            />
+          </div>
 
-          <p className='py-1'>Email*</p>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder='Email'
-            required
-            className='w-4/5 border-[1px] py-[18px] px-[30px] rounded-[14px] mb-[25px] bg-white'
-          />
+          <div className='mb-4'>
+            <p className='py-1'>Email*</p>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder='Email'
+              required
+              className='w-full border py-4 px-6 rounded-[14px] bg-white'
+            />
+          </div>
 
-          <p className='py-1'>Message*</p>
-          <textarea
-            name="text"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            placeholder='Message'
-            className='w-4/5 border-[1px] py-[18px] px-[30px] rounded-[14px] mb-[25px] bg-white'
-          ></textarea>
+          <div className='mb-6'>
+            <p className='py-1'>Message*</p>
+            <textarea
+              name="text"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              placeholder='Message'
+              className='w-full border py-4 px-6 rounded-[14px] bg-white h-32 resize-none'
+            ></textarea>
+          </div>
 
           <div
-            className='w-4/5 border-2 bg-black text-white text-center py-5 px-[35px] rounded-[14px] cursor-pointer'
+            className='w-full bg-black text-white text-center py-4 px-6 rounded-[14px] cursor-pointer hover:opacity-90'
             onClick={handleSubmit}
           >
             <button>Send Message</button>
           </div>
         </div>
 
-        <div className='w-[640px] h-[600px] relative left-80'>
-          <Image src="/C.svg" alt="Boy" fill />
+        {/* Image Section */}
+        <div className='w-full lg:w-1/2 h-[300px] lg:h-[600px] relative hidden lg:block'>
+          <Image src="/C.svg" alt="Boy" fill className='object-contain' />
         </div>
       </div>
     </div>

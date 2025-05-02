@@ -5,17 +5,24 @@ const spaceGrotesk = Space_Grotesk({
   weight: '400',
   subsets: ['latin'],
 });
-type Props = {}
 
-function Impact({}: Props) {
+export default function Impact() {
   return (
-    <div className={spaceGrotesk.className}>
-        <div className='flex max-w-[90%] m-auto mb-[85px] justify-start items-center'>
-            <div className='gap-2.5 px-[7px] py-[5px] mr-10 text-[40px] leading-[100%] rounded-[7px] bg-[#B9FF66] flex justify-center items-center font-medium'><h2>Our Journey</h2></div>
-            <div className='font-normal text-[18px] leading-[100%]'><p>From humble beginnings to industry leaders, discover how Positivus has</p> <p>evolved to drive success for bussiness woldwide.</p></div>
-        </div>
-    </div>
-  )
-}
+    <section className={spaceGrotesk.className}>
+      <div className="max-w-7xl mx-auto px-4 py-10">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6">
+          {/* Title Box */}
+          <div className="bg-[#B9FF66] text-2xl sm:text-3xl lg:text-4xl font-medium rounded-md px-4 py-2 w-fit">
+            <h2>Our Journey</h2>
+          </div>
 
-export default Impact
+          {/* Description */}
+          <p className="text-base sm:text-lg leading-relaxed text-gray-700 max-w-2xl">
+            From humble beginnings to industry leaders, discover how Positivus has
+            evolved to drive success for businesses worldwide.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}

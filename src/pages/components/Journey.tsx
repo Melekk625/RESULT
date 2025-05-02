@@ -1,21 +1,25 @@
 import React from 'react'
-import { Space_Grotesk } from 'next/font/google';
+import { Space_Grotesk } from 'next/font/google'
 
 const spaceGrotesk = Space_Grotesk({
-  weight: '400',
+  weight: ['400', '500'],
   subsets: ['latin'],
-});
+})
 
-type Props = {}
-
-function Journey({}: Props) {
+function Journey() {
   return (
-    <div className={spaceGrotesk.className}>
-        <div className='flex max-w-[90%] m-auto mb-[85px]'>
-            <div className='gap-2.5 px-[7px] mr-10 text-[40px] leading-[100%] rounded-[7px] bg-[#B9FF66] flex justify-center items-center font-medium'><h2>Our Impact in Numbers</h2></div>
-            <div className='font-normal text-[18px] leading-[100%]'><p>A snapshot of the milestones and achievements</p> <p>that drive our successs</p></div>
+    <section className={spaceGrotesk.className}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl leading-tight rounded-md bg-[#B9FF66] px-4 py-2 font-medium w-fit">
+            Our Impact in Numbers
+          </h2>
+          <p className="text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-xl">
+            A snapshot of the milestones and achievements that drive our success.
+          </p>
         </div>
-    </div>
+      </div>
+    </section>
   )
 }
 
